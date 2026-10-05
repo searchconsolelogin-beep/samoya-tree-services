@@ -1,0 +1,2938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tree Removal & Tree Trimming in Reseda, CA | Samayoa Tree Service</title>
+
+    <meta name="description" content="Samayoa Tree Service provides professional tree removal and tree trimming in Reseda, CA. Reliable, affordable tree service with 10+ years of experience and same-day service available.">
+
+    <meta name="robots" content="index, follow">
+
+    <style>
+
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #243128;
+            background: #ffffff;
+            line-height: 1.7;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        button,
+        input,
+        textarea,
+        select {
+            font-family: inherit;
+        }
+
+        :root {
+            --green-dark: #123d22;
+            --green: #1f6335;
+            --green-light: #3e854b;
+            --green-soft: #eaf4e7;
+            --lime: #9bc85c;
+            --brown: #65431f;
+            --cream: #f7f9f5;
+            --text: #26332a;
+            --muted: #69746c;
+            --border: #e1e8df;
+            --white: #ffffff;
+            --shadow: 0 18px 50px rgba(17, 61, 34, 0.10);
+        }
+
+        .samayoa-page {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .container {
+            width: min(1180px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-light {
+            background: var(--cream);
+        }
+
+        .section-heading {
+            max-width: 760px;
+            margin: 0 auto 55px;
+            text-align: center;
+        }
+
+        .eyebrow {
+            color: var(--green-light);
+            font-size: 13px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.7px;
+            margin-bottom: 12px;
+        }
+
+        .section-heading h2 {
+            color: var(--green-dark);
+            font-size: clamp(32px, 4vw, 50px);
+            line-height: 1.12;
+            margin-bottom: 17px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            font-size: 17px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 14px 25px;
+            min-height: 52px;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: 800;
+            transition: .25s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        .btn-green {
+            background: var(--green);
+            color: #fff;
+        }
+
+        .btn-green:hover {
+            background: var(--green-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border-color: rgba(255,255,255,.7);
+            color: #fff;
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: #fff;
+            color: var(--green-dark);
+        }
+
+        .btn-dark {
+            background: var(--green-dark);
+            color: #fff;
+        }
+
+        .btn-dark:hover {
+            background: var(--green);
+            transform: translateY(-2px);
+        }
+
+
+        /* =====================================================
+           TOP BAR
+        ===================================================== */
+
+        .topbar {
+            background: var(--green-dark);
+            color: #fff;
+            font-size: 13px;
+        }
+
+        .topbar-inner {
+            min-height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .topbar-left,
+        .topbar-right {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .topbar a {
+            color: #fff;
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .header {
+            background: #fff;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            min-height: 92px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .logo {
+            width: 245px;
+            flex-shrink: 0;
+        }
+
+        .logo img {
+            width: 100%;
+            height: auto;
+            max-height: 78px;
+            object-fit: contain;
+        }
+
+        .navigation {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+        }
+
+        .navigation a {
+            color: var(--text);
+            font-size: 14px;
+            font-weight: 700;
+            transition: color .2s ease;
+        }
+
+        .navigation a:hover {
+            color: var(--green);
+        }
+
+        .header-phone {
+            background: var(--green);
+            color: #fff;
+            padding: 12px 18px;
+            border-radius: 6px;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+
+        .header-phone:hover {
+            background: var(--green-dark);
+        }
+
+        .menu-toggle {
+            display: none;
+            width: 44px;
+            height: 44px;
+            border: 0;
+            border-radius: 6px;
+            background: var(--green-dark);
+            color: #fff;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            position: relative;
+            min-height: 690px;
+            display: flex;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(7, 39, 19, .96) 0%,
+                    rgba(7, 39, 19, .90) 45%,
+                    rgba(7, 39, 19, .56) 100%
+                ),
+                url("https://api.locallypages.com/uploads/logo[0]-1788965054329-220724729.png")
+                right center / 600px auto no-repeat,
+                linear-gradient(135deg, #0b341b, #28603a);
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(
+                    circle at 80% 20%,
+                    rgba(155, 200, 92, .18),
+                    transparent 28%
+                );
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            color: #fff;
+            padding: 70px 0;
+        }
+
+        .hero-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 15px;
+            border: 1px solid rgba(255,255,255,.22);
+            background: rgba(255,255,255,.08);
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(43px, 6vw, 72px);
+            line-height: 1.03;
+            letter-spacing: -2px;
+            margin-bottom: 23px;
+            color: #fff;
+            font-weight: 900;
+        }
+
+        .hero h1 span {
+            color: #a9d26c;
+        }
+
+        .hero-description {
+            max-width: 650px;
+            font-size: 18px;
+            line-height: 1.75;
+            color: rgba(255,255,255,.87);
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+        }
+
+        .hero-trust {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 22px;
+            margin-top: 35px;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,.9);
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .trust-check {
+            width: 27px;
+            height: 27px;
+            display: grid;
+            place-items: center;
+            background: var(--lime);
+            color: var(--green-dark);
+            border-radius: 50%;
+            font-weight: 900;
+        }
+
+
+        /* =====================================================
+           STATS
+        ===================================================== */
+
+        .stats {
+            position: relative;
+            margin-top: -55px;
+            z-index: 5;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .stat {
+            text-align: center;
+            padding: 30px 20px;
+            border-right: 1px solid var(--border);
+        }
+
+        .stat:last-child {
+            border-right: 0;
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 30px;
+            line-height: 1.2;
+            color: var(--green-dark);
+        }
+
+        .stat span {
+            display: block;
+            color: var(--muted);
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+
+        /* =====================================================
+           ABOUT
+        ===================================================== */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-image {
+            min-height: 500px;
+            border-radius: 18px;
+            position: relative;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(18,61,34,.94),
+                    rgba(62,133,75,.72)
+                ),
+                url("https://api.locallypages.com/uploads/logo[0]-1788965054329-220724729.png")
+                center / contain no-repeat;
+        }
+
+        .experience-badge {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            width: 125px;
+            height: 125px;
+            border-radius: 50%;
+            background: var(--lime);
+            color: var(--green-dark);
+            display: grid;
+            place-items: center;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 900;
+            line-height: 1.25;
+            box-shadow: 0 15px 30px rgba(0,0,0,.15);
+        }
+
+        .about-content h2 {
+            color: var(--green-dark);
+            font-size: clamp(34px, 4vw, 49px);
+            line-height: 1.12;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            color: var(--muted);
+            margin-bottom: 17px;
+        }
+
+        .check-list {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0 30px;
+            display: grid;
+            gap: 12px;
+        }
+
+        .check-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+        }
+
+        .check {
+            width: 24px;
+            height: 24px;
+            display: grid;
+            place-items: center;
+            background: var(--green-soft);
+            color: var(--green);
+            border-radius: 50%;
+            font-size: 13px;
+            font-weight: 900;
+        }
+
+
+        /* =====================================================
+           SERVICES
+        ===================================================== */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 13px;
+            padding: 38px;
+            position: relative;
+            overflow: hidden;
+            transition: .25s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+            box-shadow: var(--shadow);
+            border-color: #c7d8c4;
+        }
+
+        .service-number {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            color: #eff4ec;
+            font-size: 90px;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .service-icon {
+            width: 66px;
+            height: 66px;
+            border-radius: 12px;
+            background: var(--green-soft);
+            display: grid;
+            place-items: center;
+            color: var(--green);
+            font-size: 30px;
+            margin-bottom: 22px;
+            position: relative;
+        }
+
+        .service-card h3 {
+            color: var(--green-dark);
+            font-size: 25px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .service-card p {
+            color: var(--muted);
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .service-link {
+            color: var(--green);
+            font-weight: 800;
+            position: relative;
+        }
+
+
+        /* =====================================================
+           WHY CHOOSE US
+        ===================================================== */
+
+        .why {
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(10,49,26,.98),
+                    rgba(29,89,47,.96)
+                );
+            color: #fff;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .why-content h2 {
+            color: #fff;
+            font-size: clamp(34px, 4vw, 50px);
+            line-height: 1.12;
+            margin-bottom: 18px;
+        }
+
+        .why-content p {
+            color: rgba(255,255,255,.74);
+            font-size: 17px;
+            margin-bottom: 28px;
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .benefit {
+            padding: 25px;
+            border: 1px solid rgba(255,255,255,.12);
+            background: rgba(255,255,255,.06);
+            border-radius: 10px;
+        }
+
+        .benefit-icon {
+            font-size: 25px;
+            margin-bottom: 9px;
+        }
+
+        .benefit h3 {
+            color: #fff;
+            font-size: 19px;
+            margin-bottom: 7px;
+        }
+
+        .benefit p {
+            color: rgba(255,255,255,.66);
+            font-size: 14px;
+            margin: 0;
+        }
+
+
+        /* =====================================================
+           PROCESS
+        ===================================================== */
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+        }
+
+        .process-card {
+            text-align: center;
+        }
+
+        .process-number {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: var(--green-dark);
+            color: #fff;
+            display: grid;
+            place-items: center;
+            font-size: 24px;
+            font-weight: 900;
+            box-shadow: 0 10px 25px rgba(18,61,34,.16);
+        }
+
+        .process-card h3 {
+            color: var(--green-dark);
+            font-size: 21px;
+            margin-bottom: 9px;
+        }
+
+        .process-card p {
+            color: var(--muted);
+        }
+
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .cta {
+            background:
+                linear-gradient(
+                    110deg,
+                    var(--green),
+                    var(--green-dark)
+                );
+            color: #fff;
+        }
+
+        .cta-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 35px;
+        }
+
+        .cta h2 {
+            color: #fff;
+            font-size: clamp(31px, 4vw, 46px);
+            line-height: 1.15;
+            margin-bottom: 10px;
+        }
+
+        .cta p {
+            color: rgba(255,255,255,.78);
+            max-width: 700px;
+        }
+
+
+        /* =====================================================
+           TESTIMONIAL / TRUST
+        ===================================================== */
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .review-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 7px 25px rgba(20,50,25,.04);
+        }
+
+        .stars {
+            color: #e6aa2c;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .review-card h3 {
+            color: var(--green-dark);
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        .review-card p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+
+        /* =====================================================
+           SERVICE AREA
+        ===================================================== */
+
+        .area-box {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 48px;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(20,50,25,.05);
+        }
+
+        .area-box h2 {
+            color: var(--green-dark);
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .area-box p {
+            max-width: 750px;
+            margin: 0 auto 25px;
+            color: var(--muted);
+        }
+
+        .area-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .area-tag {
+            background: var(--green-soft);
+            color: var(--green-dark);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           FAQ
+        ===================================================== */
+
+        .faq-wrapper {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .faq-question {
+            width: 100%;
+            border: 0;
+            background: transparent;
+            text-align: left;
+            padding: 23px 45px 23px 0;
+            font-size: 17px;
+            font-weight: 800;
+            color: var(--green-dark);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .faq-question::after {
+            content: "+";
+            position: absolute;
+            right: 5px;
+            top: 17px;
+            font-size: 28px;
+            font-weight: 400;
+            transition: .25s ease;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .3s ease;
+        }
+
+        .faq-answer p {
+            color: var(--muted);
+            margin: 0 0 22px;
+        }
+
+
+        /* =====================================================
+           CONTACT
+        ===================================================== */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: .85fr 1.15fr;
+            gap: 40px;
+        }
+
+        .contact-info {
+            background: var(--green-dark);
+            color: #fff;
+            border-radius: 15px;
+            padding: 42px;
+        }
+
+        .contact-info h2 {
+            color: #fff;
+            font-size: 35px;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .contact-info > p {
+            color: rgba(255,255,255,.72);
+            margin-bottom: 30px;
+        }
+
+        .contact-detail {
+            display: flex;
+            gap: 14px;
+            margin-top: 23px;
+        }
+
+        .contact-icon {
+            width: 45px;
+            height: 45px;
+            flex: 0 0 45px;
+            display: grid;
+            place-items: center;
+            border-radius: 8px;
+            background: rgba(255,255,255,.10);
+        }
+
+        .contact-detail strong {
+            display: block;
+            color: #fff;
+        }
+
+        .contact-detail span,
+        .contact-detail a {
+            color: rgba(255,255,255,.70);
+        }
+
+        .contact-form {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            padding: 42px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-form h2 {
+            color: var(--green-dark);
+            font-size: 30px;
+            margin-bottom: 7px;
+        }
+
+        .contact-form > p {
+            color: var(--muted);
+            margin-bottom: 25px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 17px;
+        }
+
+        .form-group {
+            margin-bottom: 2px;
+        }
+
+        .full {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--green-dark);
+            font-size: 14px;
+            font-weight: 800;
+            margin-bottom: 7px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            border: 1px solid #d8e1d8;
+            border-radius: 6px;
+            background: #fbfcfa;
+            padding: 13px 14px;
+            outline: none;
+            font-size: 15px;
+            color: var(--text);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--green);
+            box-shadow: 0 0 0 3px rgba(62,133,75,.10);
+        }
+
+        .form-group textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .form-message {
+            display: none;
+            margin-top: 15px;
+            padding: 13px 15px;
+            background: var(--green-soft);
+            border-radius: 6px;
+            color: var(--green-dark);
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        .footer {
+            background: #082517;
+            color: #fff;
+            padding: 65px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.3fr .7fr .8fr;
+            gap: 55px;
+            padding-bottom: 45px;
+        }
+
+        .footer-logo {
+            width: 235px;
+            margin-bottom: 20px;
+            filter: brightness(0) invert(1);
+        }
+
+        .footer p {
+            color: rgba(255,255,255,.64);
+        }
+
+        .footer h3 {
+            color: #fff;
+            font-size: 17px;
+            margin-bottom: 17px;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer li {
+            margin-bottom: 9px;
+        }
+
+        .footer a {
+            color: rgba(255,255,255,.67);
+        }
+
+        .footer a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.1);
+            padding-top: 22px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            color: rgba(255,255,255,.5);
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           FLOATING CALL BUTTON
+        ===================================================== */
+
+        .floating-call {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 20px;
+            border-radius: 50px;
+            background: var(--green);
+            color: #fff;
+            font-size: 14px;
+            font-weight: 800;
+            box-shadow: 0 10px 30px rgba(0,0,0,.22);
+        }
+
+        .floating-call:hover {
+            background: var(--green-dark);
+        }
+
+
+        /* =====================================================
+           ANIMATION
+        ===================================================== */
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: opacity .7s ease, transform .7s ease;
+        }
+
+        .fade-up.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 1050px) {
+
+            .navigation {
+                gap: 16px;
+            }
+
+            .header-phone {
+                display: none;
+            }
+
+            .hero {
+                background:
+                    linear-gradient(
+                        90deg,
+                        rgba(7,39,19,.96),
+                        rgba(7,39,19,.87)
+                    ),
+                    linear-gradient(135deg, #0b341b, #28603a);
+            }
+
+            .about-grid,
+            .why-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                min-height: 420px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+
+        @media (max-width: 760px) {
+
+            .container {
+                width: min(100% - 28px, 1180px);
+            }
+
+            .section {
+                padding: 65px 0;
+            }
+
+            .topbar-left {
+                display: none;
+            }
+
+            .topbar-inner {
+                justify-content: center;
+            }
+
+            .header-inner {
+                min-height: 76px;
+            }
+
+            .logo {
+                width: 190px;
+            }
+
+            .navigation {
+                position: absolute;
+                left: 14px;
+                right: 14px;
+                top: calc(100% + 7px);
+                background: #fff;
+                padding: 12px;
+                border-radius: 8px;
+                box-shadow: var(--shadow);
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+            }
+
+            .navigation.active {
+                display: flex;
+            }
+
+            .navigation a {
+                padding: 12px;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .navigation a:last-child {
+                border-bottom: 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero {
+                min-height: 650px;
+            }
+
+            .hero-content {
+                padding: 65px 0;
+            }
+
+            .hero h1 {
+                font-size: 46px;
+                letter-spacing: -1px;
+            }
+
+            .hero-description {
+                font-size: 17px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+            }
+
+            .hero-trust {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 13px;
+            }
+
+            .stats {
+                margin-top: 0;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                border-radius: 0;
+            }
+
+            .stat {
+                border-bottom: 1px solid var(--border);
+            }
+
+            .stat:nth-child(2),
+            .stat:nth-child(4) {
+                border-right: 0;
+            }
+
+            .services-grid,
+            .benefits,
+            .process-grid,
+            .review-grid,
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .full {
+                grid-column: auto;
+            }
+
+            .cta-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .cta-inner .btn {
+                width: auto;
+            }
+
+            .area-box,
+            .contact-info,
+            .contact-form {
+                padding: 28px 22px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+            }
+
+            .floating-call {
+                left: 14px;
+                right: 14px;
+                bottom: 14px;
+                justify-content: center;
+            }
+        }
+
+
+        @media (max-width: 430px) {
+
+            .logo {
+                width: 170px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero-trust {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stat {
+                border-right: 0 !important;
+            }
+
+            .stat:last-child {
+                border-bottom: 0;
+            }
+
+            .about-image {
+                min-height: 350px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<div class="samayoa-page">
+
+
+    <!-- =====================================================
+         TOP BAR
+    ===================================================== -->
+
+    <div class="topbar">
+
+        <div class="container topbar-inner">
+
+            <div class="topbar-left">
+                <span>📍 Reseda, CA</span>
+                <span>•</span>
+                <span>Open 24 Hours</span>
+            </div>
+
+            <div class="topbar-right">
+                <span>Need Tree Service?</span>
+                <a href="tel:+17479228621">
+                    (747) 922-8621
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         HEADER
+    ===================================================== -->
+
+    <header class="header">
+
+        <div class="container header-inner">
+
+            <a href="#home" class="logo">
+                <img
+                    src="https://api.locallypages.com/uploads/logo[0]-1788965054329-220724729.png"
+                    alt="Samayoa Tree Service"
+                >
+            </a>
+
+            <nav class="navigation" id="navigation">
+
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#why-us">Why Us</a>
+                <a href="#process">Process</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+
+            </nav>
+
+            <a
+                href="tel:+17479228621"
+                class="header-phone"
+            >
+                ☎ Call Now
+            </a>
+
+            <button
+                type="button"
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open menu"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         HERO
+    ===================================================== -->
+
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <div class="hero-content fade-up">
+
+                <div class="hero-label">
+                    🌿 Local Tree Care Professionals
+                </div>
+
+                <h1>
+                    Professional
+                    <span>Tree Removal</span>
+                    & Trimming in Reseda, CA
+                </h1>
+
+                <p class="hero-description">
+                    Samayoa Tree Service provides dependable tree removal and
+                    tree trimming for residential and commercial properties in
+                    Reseda, CA. Get professional help for overgrown, damaged,
+                    unwanted, or difficult-to-manage trees.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="tel:+17479228621"
+                        class="btn btn-green"
+                    >
+                        ☎ Call for Tree Service
+                    </a>
+
+                    <a
+                        href="#contact"
+                        class="btn btn-outline"
+                    >
+                        Request Service →
+                    </a>
+
+                </div>
+
+                <div class="hero-trust">
+
+                    <div class="trust-item">
+                        <span class="trust-check">✓</span>
+                        10+ Years Experience
+                    </div>
+
+                    <div class="trust-item">
+                        <span class="trust-check">✓</span>
+                        Same-Day Service
+                    </div>
+
+                    <div class="trust-item">
+                        <span class="trust-check">✓</span>
+                        Licensed
+                    </div>
+
+                    <div class="trust-item">
+                        <span class="trust-check">✓</span>
+                        Affordable
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         STATS
+    ===================================================== -->
+
+    <section class="stats">
+
+        <div class="container stats-grid">
+
+            <div class="stat">
+                <strong>10+</strong>
+                <span>Years Experience</span>
+            </div>
+
+            <div class="stat">
+                <strong>24/7</strong>
+                <span>Availability</span>
+            </div>
+
+            <div class="stat">
+                <strong>2</strong>
+                <span>Core Services</span>
+            </div>
+
+            <div class="stat">
+                <strong>Local</strong>
+                <span>Reseda Tree Service</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ABOUT
+    ===================================================== -->
+
+    <section class="section" id="about">
+
+        <div class="container about-grid">
+
+            <div class="about-image fade-up">
+
+                <div class="experience-badge">
+                    10+<br>
+                    YEARS<br>
+                    EXPERIENCE
+                </div>
+
+            </div>
+
+            <div class="about-content fade-up">
+
+                <div class="eyebrow">
+                    About Samayoa Tree Service
+                </div>
+
+                <h2>
+                    Reliable Tree Care for Reseda Properties
+                </h2>
+
+                <p>
+                    Samayoa Tree Service provides tree removal and tree trimming
+                    services for residential and commercial properties in
+                    Reseda, CA.
+                </p>
+
+                <p>
+                    We help property owners manage overgrown, damaged, unwanted,
+                    or difficult-to-manage trees while keeping their outdoor
+                    spaces cleaner and easier to maintain.
+                </p>
+
+                <ul class="check-list">
+
+                    <li>
+                        <span class="check">✓</span>
+                        10+ years of tree service experience
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        Residential and commercial service
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        Same-day service available
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        Licensed and affordable service
+                    </li>
+
+                </ul>
+
+                <a
+                    href="tel:+17479228621"
+                    class="btn btn-dark"
+                >
+                    Talk to Our Tree Service Team
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SERVICES
+    ===================================================== -->
+
+    <section
+        class="section section-light"
+        id="services"
+    >
+
+        <div class="container">
+
+            <div class="section-heading fade-up">
+
+                <div class="eyebrow">
+                    Our Services
+                </div>
+
+                <h2>
+                    Professional Tree Services in Reseda, CA
+                </h2>
+
+                <p>
+                    Dependable tree care solutions for residential and commercial
+                    property owners throughout Reseda.
+                </p>
+
+            </div>
+
+
+            <div class="services-grid">
+
+
+                <!-- TREE REMOVAL -->
+
+                <article class="service-card fade-up">
+
+                    <span class="service-number">
+                        01
+                    </span>
+
+                    <div class="service-icon">
+                        🌳
+                    </div>
+
+                    <h3>
+                        Tree Removal
+                    </h3>
+
+                    <p>
+                        When a tree is unwanted, damaged, overgrown, or difficult
+                        to manage, professional removal may be the right solution.
+                        Samayoa Tree Service provides tree removal services for
+                        properties in Reseda, CA.
+                    </p>
+
+                    <a
+                        href="tel:+17479228621"
+                        class="service-link"
+                    >
+                        Call for Tree Removal →
+                    </a>
+
+                </article>
+
+
+                <!-- TREE TRIMMING -->
+
+                <article class="service-card fade-up">
+
+                    <span class="service-number">
+                        02
+                    </span>
+
+                    <div class="service-icon">
+                        ✂
+                    </div>
+
+                    <h3>
+                        Tree Trimming
+                    </h3>
+
+                    <p>
+                        Overgrown trees can become difficult to manage. Our tree
+                        trimming service helps property owners maintain trees,
+                        improve their appearance, and keep outdoor areas easier
+                        to maintain.
+                    </p>
+
+                    <a
+                        href="tel:+17479228621"
+                        class="service-link"
+                    >
+                        Call for Tree Trimming →
+                    </a>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         WHY CHOOSE US
+    ===================================================== -->
+
+    <section
+        class="section why"
+        id="why-us"
+    >
+
+        <div class="container why-grid">
+
+            <div class="why-content fade-up">
+
+                <div
+                    class="eyebrow"
+                    style="color:#a9d26c;"
+                >
+                    Why Choose Samayoa
+                </div>
+
+                <h2>
+                    Tree Service You Can Count On
+                </h2>
+
+                <p>
+                    Choosing a tree service provider should be simple. Samayoa
+                    Tree Service focuses on dependable service, practical
+                    solutions, and professional tree care for Reseda properties.
+                </p>
+
+                <a
+                    href="tel:+17479228621"
+                    class="btn btn-green"
+                >
+                    ☎ Call (747) 922-8621
+                </a>
+
+            </div>
+
+
+            <div class="benefits">
+
+                <div class="benefit fade-up">
+
+                    <div class="benefit-icon">
+                        🌳
+                    </div>
+
+                    <h3>
+                        10+ Years Experience
+                    </h3>
+
+                    <p>
+                        Years of experience providing dependable tree service
+                        solutions.
+                    </p>
+
+                </div>
+
+
+                <div class="benefit fade-up">
+
+                    <div class="benefit-icon">
+                        ⚡
+                    </div>
+
+                    <h3>
+                        Same-Day Service
+                    </h3>
+
+                    <p>
+                        Same-day service is available when you need tree service
+                        quickly.
+                    </p>
+
+                </div>
+
+
+                <div class="benefit fade-up">
+
+                    <div class="benefit-icon">
+                        ✓
+                    </div>
+
+                    <h3>
+                        Licensed Service
+                    </h3>
+
+                    <p>
+                        Professional service from a licensed tree service provider.
+                    </p>
+
+                </div>
+
+
+                <div class="benefit fade-up">
+
+                    <div class="benefit-icon">
+                        $
+                    </div>
+
+                    <h3>
+                        Affordable
+                    </h3>
+
+                    <p>
+                        Practical tree care solutions designed with affordability
+                        in mind.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PROCESS
+    ===================================================== -->
+
+    <section class="section" id="process">
+
+        <div class="container">
+
+            <div class="section-heading fade-up">
+
+                <div class="eyebrow">
+                    Our Process
+                </div>
+
+                <h2>
+                    Simple Tree Service From Start to Finish
+                </h2>
+
+                <p>
+                    Getting professional tree service shouldn't be complicated.
+                    Our process makes it easy to get started.
+                </p>
+
+            </div>
+
+
+            <div class="process-grid">
+
+                <div class="process-card fade-up">
+
+                    <div class="process-number">
+                        1
+                    </div>
+
+                    <h3>
+                        Contact Us
+                    </h3>
+
+                    <p>
+                        Call us and explain what is happening with your tree
+                        or property.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card fade-up">
+
+                    <div class="process-number">
+                        2
+                    </div>
+
+                    <h3>
+                        Discuss Your Needs
+                    </h3>
+
+                    <p>
+                        We discuss the tree service you need and the best
+                        approach for your property.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card fade-up">
+
+                    <div class="process-number">
+                        3
+                    </div>
+
+                    <h3>
+                        Get Your Tree Service
+                    </h3>
+
+                    <p>
+                        Move forward with the tree removal or trimming service
+                        your property needs.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CTA
+    ===================================================== -->
+
+    <section class="section cta">
+
+        <div class="container cta-inner">
+
+            <div>
+
+                <h2>
+                    Have a Tree That Needs Attention?
+                </h2>
+
+                <p>
+                    Whether you need tree removal or tree trimming in Reseda,
+                    CA, contact Samayoa Tree Service today.
+                </p>
+
+            </div>
+
+            <a
+                href="tel:+17479228621"
+                class="btn btn-outline"
+            >
+                ☎ Call Now
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CUSTOMER EXPERIENCE / REVIEWS
+    ===================================================== -->
+
+    <section class="section section-light">
+
+        <div class="container">
+
+            <div class="section-heading fade-up">
+
+                <div class="eyebrow">
+                    Customer Experience
+                </div>
+
+                <h2>
+                    Professional Tree Care for Local Property Owners
+                </h2>
+
+                <p>
+                    We focus on dependable communication, professional service,
+                    and practical solutions for every tree care project.
+                </p>
+
+            </div>
+
+
+            <div class="review-grid">
+
+                <div class="review-card fade-up">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <h3>
+                        Dependable Service
+                    </h3>
+
+                    <p>
+                        Samayoa Tree Service is committed to providing dependable
+                        tree care and helping local property owners address
+                        their tree service needs.
+                    </p>
+
+                </div>
+
+
+                <div class="review-card fade-up">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <h3>
+                        Experienced Professionals
+                    </h3>
+
+                    <p>
+                        With more than 10 years of experience, the team brings
+                        practical knowledge to tree removal and tree trimming
+                        projects.
+                    </p>
+
+                </div>
+
+
+                <div class="review-card fade-up">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <h3>
+                        Local Tree Care
+                    </h3>
+
+                    <p>
+                        Serving Reseda, CA, Samayoa Tree Service provides local
+                        solutions for residential and commercial properties.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SERVICE AREA
+    ===================================================== -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="area-box fade-up">
+
+                <div class="eyebrow">
+                    Service Area
+                </div>
+
+                <h2>
+                    Tree Service in Reseda, CA
+                </h2>
+
+                <p>
+                    Samayoa Tree Service serves residential and commercial
+                    property owners in Reseda, California. Contact us to discuss
+                    your tree removal or tree trimming needs.
+                </p>
+
+                <div class="area-tags">
+
+                    <span class="area-tag">
+                        Reseda, CA
+                    </span>
+
+                    <span class="area-tag">
+                        Residential Properties
+                    </span>
+
+                    <span class="area-tag">
+                        Commercial Properties
+                    </span>
+
+                    <span class="area-tag">
+                        Tree Removal
+                    </span>
+
+                    <span class="area-tag">
+                        Tree Trimming
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FAQ
+    ===================================================== -->
+
+    <section
+        class="section section-light"
+        id="faq"
+    >
+
+        <div class="container">
+
+            <div class="section-heading fade-up">
+
+                <div class="eyebrow">
+                    Frequently Asked Questions
+                </div>
+
+                <h2>
+                    Tree Service FAQs
+                </h2>
+
+                <p>
+                    Answers to common questions about tree removal and tree
+                    trimming in Reseda, CA.
+                </p>
+
+            </div>
+
+
+            <div class="faq-wrapper">
+
+
+                <div class="faq-item">
+
+                    <button
+                        type="button"
+                        class="faq-question"
+                    >
+                        What tree services does Samayoa Tree Service provide?
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Samayoa Tree Service provides tree removal and tree
+                            trimming services for residential and commercial
+                            properties in Reseda, CA.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button
+                        type="button"
+                        class="faq-question"
+                    >
+                        Do you provide tree removal in Reseda?
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Yes. Samayoa Tree Service provides tree removal
+                            services in Reseda for unwanted, damaged, overgrown,
+                            or difficult-to-manage trees.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button
+                        type="button"
+                        class="faq-question"
+                    >
+                        Do you offer tree trimming?
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Yes. Tree trimming is one of the primary services
+                            provided by Samayoa Tree Service in Reseda, CA.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button
+                        type="button"
+                        class="faq-question"
+                    >
+                        Do you offer same-day tree service?
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Same-day service is available. Call Samayoa Tree
+                            Service at (747) 922-8621 to discuss your needs.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button
+                        type="button"
+                        class="faq-question"
+                    >
+                        Do you serve commercial properties?
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Yes. Samayoa Tree Service provides tree services for
+                            both residential and commercial properties in Reseda.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button
+                        type="button"
+                        class="faq-question"
+                    >
+                        How can I contact Samayoa Tree Service?
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            You can call Samayoa Tree Service directly at
+                            (747) 922-8621 to discuss tree removal or tree
+                            trimming services.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTACT
+    ===================================================== -->
+
+    <section
+        class="section"
+        id="contact"
+    >
+
+        <div class="container contact-grid">
+
+
+            <!-- CONTACT INFORMATION -->
+
+            <div class="contact-info fade-up">
+
+                <h2>
+                    Let's Talk About Your Trees
+                </h2>
+
+                <p>
+                    Contact Samayoa Tree Service to discuss your tree removal
+                    or tree trimming needs in Reseda, CA.
+                </p>
+
+
+                <div class="contact-detail">
+
+                    <div class="contact-icon">
+                        ☎
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Phone
+                        </strong>
+
+                        <a href="tel:+17479228621">
+                            (747) 922-8621
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-detail">
+
+                    <div class="contact-icon">
+                        📍
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Service Area
+                        </strong>
+
+                        <span>
+                            Reseda, CA
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-detail">
+
+                    <div class="contact-icon">
+                        ⏰
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Business Hours
+                        </strong>
+
+                        <span>
+                            Open 24 Hours
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-detail">
+
+                    <div class="contact-icon">
+                        🌳
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Services
+                        </strong>
+
+                        <span>
+                            Tree Removal & Tree Trimming
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+
+            <div class="contact-form fade-up">
+
+                <h2>
+                    Request Tree Service
+                </h2>
+
+                <p>
+                    Tell us what type of tree service you need.
+                </p>
+
+
+                <form id="contactForm">
+
+                    <div class="form-grid">
+
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Your name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="phone">
+                                Phone
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="Your phone number"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group full">
+
+                            <label for="service">
+                                Service Needed
+                            </label>
+
+                            <select
+                                id="service"
+                                name="service"
+                                required
+                            >
+
+                                <option value="">
+                                    Select a service
+                                </option>
+
+                                <option value="Tree Removal">
+                                    Tree Removal
+                                </option>
+
+                                <option value="Tree Trimming">
+                                    Tree Trimming
+                                </option>
+
+                                <option value="Other Tree Service">
+                                    Other Tree Service
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group full">
+
+                            <label for="message">
+                                Tell Us About Your Tree
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="Describe the tree or service you need..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <div class="form-group full">
+
+                            <button
+                                type="submit"
+                                class="btn btn-green"
+                            >
+                                Request Service
+                            </button>
+
+                            <div
+                                class="form-message"
+                                id="formMessage"
+                            >
+                                Thank you! Your request has been prepared.
+                                Please call (747) 922-8621 to complete your request.
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+
+            <div class="footer-grid">
+
+
+                <div>
+
+                    <img
+                        src="https://api.locallypages.com/uploads/logo[0]-1788965054329-220724729.png"
+                        alt="Samayoa Tree Service"
+                        class="footer-logo"
+                    >
+
+                    <p>
+                        Professional tree removal and tree trimming services
+                        for residential and commercial properties in Reseda, CA.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Quick Links
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="#home">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+
+                        <li>
+                            <a href="#services">Services</a>
+                        </li>
+
+                        <li>
+                            <a href="#why-us">Why Choose Us</a>
+                        </li>
+
+                        <li>
+                            <a href="#faq">FAQ</a>
+                        </li>
+
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Services
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="#services">
+                                Tree Removal
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#services">
+                                Tree Trimming
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#contact">
+                                Request Service
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="tel:+17479228621">
+                                (747) 922-8621
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © <span id="year"></span>
+                    Samayoa Tree Service. All Rights Reserved.
+                </span>
+
+                <span>
+                    Tree Removal & Tree Trimming in Reseda, CA
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         FLOATING CALL BUTTON
+    ===================================================== -->
+
+    <a
+        href="tel:+17479228621"
+        class="floating-call"
+    >
+        ☎ Call Now
+    </a>
+
+
+</div>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    /* =====================================================
+       MOBILE MENU
+    ===================================================== */
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navigation = document.getElementById("navigation");
+
+    if (menuToggle && navigation) {
+
+        menuToggle.addEventListener("click", function () {
+
+            navigation.classList.toggle("active");
+
+            const opened =
+                navigation.classList.contains("active");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                opened ? "true" : "false"
+            );
+
+            menuToggle.innerHTML =
+                opened ? "✕" : "☰";
+
+        });
+
+
+        navigation
+            .querySelectorAll("a")
+            .forEach(function (link) {
+
+                link.addEventListener("click", function () {
+
+                    navigation.classList.remove("active");
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                    menuToggle.innerHTML = "☰";
+
+                });
+
+            });
+
+    }
+
+
+    /* =====================================================
+       SMOOTH SCROLL
+    ===================================================== */
+
+    document
+        .querySelectorAll('.samayoa-page a[href^="#"]')
+        .forEach(function (link) {
+
+            link.addEventListener("click", function (event) {
+
+                const targetId =
+                    this.getAttribute("href");
+
+                if (
+                    !targetId ||
+                    targetId === "#"
+                ) {
+                    return;
+                }
+
+                const target =
+                    document.querySelector(targetId);
+
+                if (!target) {
+                    return;
+                }
+
+                event.preventDefault();
+
+                const header =
+                    document.querySelector(".header");
+
+                const headerHeight =
+                    header ? header.offsetHeight : 0;
+
+                const position =
+                    target.getBoundingClientRect().top +
+                    window.scrollY -
+                    headerHeight;
+
+                window.scrollTo({
+                    top: position,
+                    behavior: "smooth"
+                });
+
+            });
+
+        });
+
+
+    /* =====================================================
+       FAQ ACCORDION
+    ===================================================== */
+
+    const faqItems =
+        document.querySelectorAll(".faq-item");
+
+    faqItems.forEach(function (item) {
+
+        const question =
+            item.querySelector(".faq-question");
+
+        const answer =
+            item.querySelector(".faq-answer");
+
+        question.addEventListener("click", function () {
+
+            const wasActive =
+                item.classList.contains("active");
+
+
+            faqItems.forEach(function (other) {
+
+                other.classList.remove("active");
+
+                const otherAnswer =
+                    other.querySelector(".faq-answer");
+
+                if (otherAnswer) {
+                    otherAnswer.style.maxHeight = null;
+                }
+
+            });
+
+
+            if (!wasActive) {
+
+                item.classList.add("active");
+
+                answer.style.maxHeight =
+                    answer.scrollHeight + "px";
+
+            }
+
+        });
+
+    });
+
+
+    /* =====================================================
+       CONTACT FORM
+    ===================================================== */
+
+    const form =
+        document.getElementById("contactForm");
+
+    const formMessage =
+        document.getElementById("formMessage");
+
+    if (form) {
+
+        form.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            const name =
+                document.getElementById("name").value.trim();
+
+            const phone =
+                document.getElementById("phone").value.trim();
+
+            const service =
+                document.getElementById("service").value;
+
+            const message =
+                document.getElementById("message").value.trim();
+
+
+            if (
+                !name ||
+                !phone ||
+                !service ||
+                !message
+            ) {
+
+                alert(
+                    "Please complete all required fields."
+                );
+
+                return;
+
+            }
+
+
+            formMessage.style.display = "block";
+
+            formMessage.innerHTML =
+                "Thank you, " +
+                name +
+                ". Your request for " +
+                service +
+                " has been received on this page. " +
+                "Please call (747) 922-8621 to complete your request.";
+
+            form.reset();
+
+        });
+
+    }
+
+
+    /* =====================================================
+       CURRENT YEAR
+    ===================================================== */
+
+    const year =
+        document.getElementById("year");
+
+    if (year) {
+
+        year.textContent =
+            new Date().getFullYear();
+
+    }
+
+
+    /* =====================================================
+       SCROLL ANIMATIONS
+    ===================================================== */
+
+    const animatedElements =
+        document.querySelectorAll(".fade-up");
+
+
+    if ("IntersectionObserver" in window) {
+
+        const observer =
+            new IntersectionObserver(
+                function (entries, observer) {
+
+                    entries.forEach(function (entry) {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add("show");
+
+                            observer.unobserve(
+                                entry.target
+                            );
+
+                        }
+
+                    });
+
+                },
+                {
+                    threshold: 0.12
+                }
+            );
+
+
+        animatedElements.forEach(function (element) {
+
+            observer.observe(element);
+
+        });
+
+    } else {
+
+        animatedElements.forEach(function (element) {
+
+            element.classList.add("show");
+
+        });
+
+    }
+
+});
+
+</script>
+
+
+<!-- =========================================================
+     LOCAL BUSINESS SCHEMA
+========================================================= -->
+
+<script type="application/ld+json">
+
+{
+    "@context": "https://schema.org",
+    "@type": "TreeService",
+    "name": "Samayoa Tree Service",
+    "url": "https://locallypages.com/biz/tree-removal-trimming-services-reseda-ca/",
+    "telephone": "+1-747-922-8621",
+    "description": "Samayoa Tree Service provides tree removal and tree trimming services for residential and commercial properties in Reseda, CA.",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Reseda",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+    },
+    "areaServed": {
+        "@type": "City",
+        "name": "Reseda"
+    },
+    "openingHours": "Mo-Su 00:00-23:59",
+    "serviceType": [
+        "Tree Removal",
+        "Tree Trimming"
+    ]
+}
+
+</script>
+
+</body>
+</html>
